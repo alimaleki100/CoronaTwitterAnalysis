@@ -40,8 +40,8 @@ place.type
 
 tweets = tp.Cursor(api.search,
               q='corona',
-                           since = "2020-01-25",
-                           until = "2020-01-26").items()
+                           since = "2020-01-23",
+                           until = "2020-01-24").items()
 
 
 tweet_data=[[tweet.coordinates,
@@ -72,4 +72,5 @@ tweetdf=pd.DataFrame(data=tweet_data,columns=dfcolumns)
 writer=pd.ExcelWriter("C:/Users/session1/Desktop/CoronaVirus24.xlsx",engine='xlsxwriter')
 tweetdf.to_excel(writer, sheet_name='new')
 writer.close()
+
 
