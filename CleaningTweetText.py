@@ -60,19 +60,7 @@ df['tokenized_text'] .head()
 
 
 
-#WordCloud
-from wordcloud import WordCloud
-wordcloud = WordCloud(width=800, height=500, random_state=21, max_font_size=110).generate(str(df['tokenized_text']))
-
-plt.figure(figsize=(10, 7))
-plt.imshow(wordcloud, interpolation="bilinear")
-plt.axis('off')
-plt.show()
-
-
-print(df['tokenized_text'].head())
-
-
-
-#stitch these tokens back together.
-
+writer=pd.ExcelWriter('C:/Users/session1/Desktop/CleanedCoronaVirus.xlsx',engine='xlsxwriter')
+df.to_excel(writer, sheet_name='new')
+writer.close()
+    
