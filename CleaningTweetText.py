@@ -6,18 +6,17 @@ Created on Sun Jan 26 14:32:39 2020
 """
 
 
-import tweepy as tp
 import pandas as pd
 import numpy as np
 import re
 import string
-from nltk.stem.porter import *
-import matplotlib.pyplot as plt
-from textblob import TextBlob
+
+
 
 
 userpattern="@[\w]*"
 RTpattern="RT"
+urlPattern="https://[\w]*"
 def remove_pattern(input_txt, userpattern,RTpattern):
     r = re.findall(userpattern, input_txt)
     for i in r:
@@ -25,10 +24,13 @@ def remove_pattern(input_txt, userpattern,RTpattern):
     RT = re.findall(RTpattern, input_txt)
     for i in RT:
         input_txt = re.sub(i, '', input_txt)        
-        
+
     return input_txt
 
-
+#Remove URL
+def remove_urls (vTEXT):
+    vTEXT = re.sub(r'(https|http)?:\/\/(\w|\.|\/|\?|\=|\&|\%)*\b', '', vTEXT, flags=re.MULTILINE)
+    return(vTEXT)
 
 def remove_punct(text):
     text  = "".join([char for char in text if char not in string.punctuation])
@@ -36,13 +38,16 @@ def remove_punct(text):
     return text
 
 
-df=pd.read_excel("C:/Users/session1/Desktop/CoronaVirus21.xlsx")
-print(df['text'].head())
+df=pd.read_csv("F:/Github/CoronaTwitterAnalysis/CoronaTwitter/secondRun.csv")
+print(df['tweet'].head())
 
 
-#Remove @user and RT pattern
+#Remove @user and RT
 
-df['tidy_text'] = np.vectorize(remove_pattern)(df['text'], userpattern,RTpattern)
+df['tidy_text'] = np.vectorize(remove_pattern)(df['tweet'], userpattern,RTpattern)
+
+#Remove URL
+df['tidy_text']=df['tidy_text'].apply(lambda x: remove_urls(x))
 
 
 #Remove Punctuation
@@ -58,9 +63,18 @@ stemmer = PorterStemmer()
 df['tokenized_text']  = df['tokenized_text'] .apply(lambda x: [stemmer.stem(i) for i in x]) # stemming
 df['tokenized_text'] .head()
 
+df['datetime']=df['date'] +' '+ df['time']
+
+df['datetime'] = pd.DatetimeIndex(df['datetime'])
 
 
-writer=pd.ExcelWriter('C:/Users/session1/Desktop/CleanedCoronaVirus.xlsx',engine='xlsxwriter')
+
+df.dtypes
+
+
+
+
+writer=pd.ExcelWriter('F:/Github/CoronaTwitterAnalysis/CoronaTwitter/CleanedCoronaVirus.xlsx',engine='xlsxwriter')
 df.to_excel(writer, sheet_name='new')
 writer.close()
     
