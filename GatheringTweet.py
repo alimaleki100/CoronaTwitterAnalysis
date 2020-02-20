@@ -11,10 +11,10 @@ import pandas as pd
 
 
 
-access_token='46845259-aFZybrNn3gTgBCcvbxo3uVkuopgRK9Lx3zg43xoEd'
-access_token_secret='M4nJxQ6nfB1AXEjsn1zkC62tOH9haQG0rDZAOd0PZaB9a'
-apiKey='34oHUFxZ8WvnzthuJ010BGPgW'
-apiSecretKey='2XUUm5vz54b9UcjXqBYf0oRYwwW5r860NLVCSIKRS85Fcgc7F7'
+access_token='XXXXXXX'
+access_token_secret='XXXXXXX'
+apiKey='XXXXXXXX'
+apiSecretKey='XXXXXXXXX'
 
 # Creating the authentication object
 auth = tp.OAuthHandler(apiKey, apiSecretKey)
