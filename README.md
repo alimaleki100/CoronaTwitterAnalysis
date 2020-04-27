@@ -13,10 +13,15 @@ An EDA and sentiment analysis using textblob were performed on dataset.
 You can use dataGathering-twint.py script to gather tweets or use twint CLI command:
 twint -s corona -o output.csv --csv -l en --unt 2020-04-15 since 2020-01-01
 the current tweet sample was gathered by twint CLI command.
-The used data set consists tweets with 'corona' keyword since 2020/01/01 until 2020/04/15.
+The used data set consists 246K tweets with 'corona' keyword since 2020/01/01 until 2020/01/31.
 
 ## Data Cleaning
 The data cleaning process is accessiblein dataCleaning.py file.
+
+# Results
+## Sentiment Analysis
+
+
 
 
 
