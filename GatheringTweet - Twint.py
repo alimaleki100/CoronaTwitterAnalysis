@@ -20,6 +20,7 @@ c.Output = 'firstRun.csv'
 c.Resume = 'firstRune.csv'
 c.Pandas_clean = True
 c.Since = '2020-01-01'
+c.Until= '2020-04-15'
 c.Pandas = True
 #c.Pandas_type = 'DataFrame'
 c.Pandas_au = True
