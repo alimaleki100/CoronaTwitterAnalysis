@@ -29,11 +29,14 @@ Polarity and Subjectivity Chart:
 
 Polarity Pie Chart:
 
-![Image of Polarity Pie Chart](https://github.com/alimaleki100/CoronaTwitterAnalysis/blob/master/images/PolarityPie.png)
+![Image of Polarity Pie Chart](https://github.com/alimaleki100/CoronaTwitterAnalysis/blob/master/images/polarityPie.png)
 
 
 
 
+Polarity Line Chart:
+
+![Image of Polarity Line Chart](https://github.com/alimaleki100/CoronaTwitterAnalysis/blob/master/images/PolarityLineChart.png)
 
 
 
