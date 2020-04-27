@@ -27,6 +27,13 @@ Polarity and Subjectivity Chart:
 
 
 
+Polarity Pie Chart:
+
+![Image of Polarity Pie Chart](https://github.com/alimaleki100/CoronaTwitterAnalysis/blob/master/images/polarityPolarityPie.png)
+
+
+
+
 
 
 
