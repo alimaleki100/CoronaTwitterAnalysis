@@ -21,11 +21,22 @@ The data cleaning process is accessiblein dataCleaning.py file.
 # Results
 ## Sentiment Analysis
 
+Polarity and Subjectivity Chart:
+![Image of Polarity and Subjectivity](https://github.com/alimaleki100/CoronaTwitterAnalysis/blob/master/images/polarity.subjectivity.png)
 
 
 
 
+Polarity Pie Chart:
 
+![Image of Polarity Pie Chart](https://github.com/alimaleki100/CoronaTwitterAnalysis/blob/master/images/polarityPie.png)
+
+
+
+
+Polarity Line Chart:
+
+![Image of Polarity Line Chart](https://github.com/alimaleki100/CoronaTwitterAnalysis/blob/master/images/PolarityLineChart.png)
 
 
 
