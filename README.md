@@ -19,6 +19,29 @@ The used data set consists 246K tweets with 'corona' keyword since 2020/01/01 un
 The data cleaning process is accessiblein dataCleaning.py file.
 
 # Results
+
+Word Cloud
+![Image of word Cloud](https://github.com/alimaleki100/CoronaTwitterAnalysis/blob/master/images/wordCloud.png)
+
+## Exploratory Analysis
+
+Number of Tweets: 246068
+
+Average of Retweets Count: 5.03
+
+Tweets by Date:
+![Image of Tweets by Date](https://github.com/alimaleki100/CoronaTwitterAnalysis/blob/master/images/tweetsByDate.png)
+
+ReTweets by Date:
+![Image of ReTweets by Date](https://github.com/alimaleki100/CoronaTwitterAnalysis/blob/master/images/retweetsByDate.png)
+
+Tweets by Hour:
+![Image of Tweets by Hour](https://github.com/alimaleki100/CoronaTwitterAnalysis/blob/master/images/tweetsByHour.png)
+
+ReTweets by Hour:
+![Image of ReTweets by Hour](https://github.com/alimaleki100/CoronaTwitterAnalysis/blob/master/images/RetweetsByHour.png)
+
+
 ## Sentiment Analysis
 
 Polarity and Subjectivity Chart:
